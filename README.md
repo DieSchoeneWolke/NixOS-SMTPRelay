@@ -1,12 +1,12 @@
 # NixOS-SMTPRelay
 
-## This repository contains `.nix` files to set up a `SMTP-Relay` using `Postfix` on the server-side as add-on to the `NixOS-Mailserver` and `MSMTP` as `MTA`.
+## This repository contains `.nix` files to set up a `SMTP-Relay` using `Postfix` on the server-side as add-on to the `NixOS-Mailserver` and `msmtp` as `SMTP client`.
 
 You can use this to route emails through your email server from a client without a static public IP address to avoid blacklisting or to not set up an entire email server within your application. 
 
 - Clone this repo with `git clone https://github.com/DieSchoeneWolke/NixOS-SMTPRelay.git` on your client.
 
-- Write your credentials with `sudo mkdir -p /etc/.secrets/ && sudo nano /etc/.secrets/smtp_password.txt` to be used by `MSMTP`.
+- Write your credentials with `sudo mkdir -p /etc/.secrets/ && sudo nano /etc/.secrets/smtp_password.txt` to be used by `msmtp`.
 
 - Write your credentials and domain in the `relay.nix` file with `nano ./NixOS-STMPRelay/relay.nix` to be used by `Postfix` at the `NixOS-Mailserver`.
 
